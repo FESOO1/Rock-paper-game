@@ -2,6 +2,9 @@ const playerChoiceButtons = document.querySelectorAll('.main-middle-picking-butt
 const pickingContainer = document.querySelector('.main-middle-picking');
 const outcomeContainer = document.querySelector('.main-middle-outcome');
 
+// SCORE
+const scoreText = document.querySelector('.main-top-itself-right-score-itself')
+
 // OUTCOME
 const pickedByPlayerOutcomeContainer = document.querySelector('#pickedByPlayerOutcomeContainer');
 const pickedByHouseOutcomeContainer = document.querySelector('#pickedByHouseOutcomeContainer');
@@ -70,7 +73,8 @@ const game = {
         rock: 'main-middle-outcome-picked-inner-itself-rock',
         paper: 'main-middle-outcome-picked-inner-itself-paper',
         lizard: 'main-middle-outcome-picked-inner-itself-lizard',
-    }
+    },
+    score: 0,
 };
 
 // PLAYER PICKING
@@ -104,6 +108,9 @@ function theHousePicking() {
 function checkWhoWonTheGame() {
     if (game.choices[game.playerPicked].canBeat[game.housePicked] === true) {
         outcomeText.textContent = 'YOU WON';
+        game.score++;
+        scoreText.textContent = game.score;
+        localStorage.setItem('scoreLS', game.score);
     } else if (game.playerPicked === game.housePicked) {
         outcomeText.textContent = 'DRAW';
     } else {
@@ -130,3 +137,16 @@ function playAgain() {
 
 // INITIALIZE BUTTONS
 playAgainButton.addEventListener('click', playAgain);
+
+// HANDLING THE SCORE
+
+function handlingTheScore() {
+    const scoreLS = localStorage.getItem('scoreLS');
+
+    if (scoreLS) {
+        game.score = scoreLS;
+        scoreText.textContent = game.score;
+    };
+};
+
+handlingTheScore();
