@@ -35,7 +35,6 @@ main {
 */
 
 .main-top {
-    padding: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -200,6 +199,14 @@ main {
     flex-direction: column;
     align-items: center;
     row-gap: 5px;
+    opacity: 0;
+    transition: opacity 300ms;
+    pointer-events: none;
+}
+
+.main-middle-outcome-main-active {
+    opacity: 1;
+    pointer-events: unset;
 }
 
 .main-middle-outcome-main-text {
@@ -224,6 +231,11 @@ main {
 .main-middle-outcome-picked {
     display: flex;
     align-items: center;
+    column-gap: 50px;
+    transition: column-gap 300ms;
+}
+
+.main-middle-outcome-picked-active {
     column-gap: 380px;
 }
 
@@ -237,6 +249,7 @@ main {
 .main-middle-outcome-picked-inner-text {
     color: white;
     letter-spacing: 5px;
+    text-align: right;
 }
 
 .main-middle-outcome-picked-inner-itself {
@@ -354,4 +367,129 @@ main {
     border: 0;
     background-color: transparent;
     cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+    .main-top-itself {
+        width: 90%;
+    }
+    .main-middle-outcome-picked-active {
+        column-gap: 300px;
+    }
+    .main-middle-outcome-picked-inner-itself {
+        width: 200px;
+        height: 200px;
+    }
+    .main-middle-outcome-picked-inner-itself-scissors,
+    .main-middle-outcome-picked-inner-itself-spock,
+    .main-middle-outcome-picked-inner-itself-paper,
+    .main-middle-outcome-picked-inner-itself-lizard,
+    .main-middle-outcome-picked-inner-itself-rock {
+        border-width: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .main-top-itself {
+        width: 100%;
+    }
+    .main-middle-outcome {
+        row-gap: 40px;
+    }
+    .main-middle-outcome-main {
+        position: static;
+        transform: none;
+    }
+    .main-middle-outcome-picked-active {
+        column-gap: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-middle-outcome-picked-inner-text {
+        font-size: 1rem;
+    }
+    .main-middle-outcome-picked-inner-itself {
+        width: 150px;
+        height: 150px;
+    }
+    .main-middle-outcome-picked-inner-itself-scissors,
+    .main-middle-outcome-picked-inner-itself-spock,
+    .main-middle-outcome-picked-inner-itself-paper,
+    .main-middle-outcome-picked-inner-itself-lizard,
+    .main-middle-outcome-picked-inner-itself-rock {
+        border-width: 10px;
+    }
+    .main-middle-outcome-main-text {
+        font-size: 2.5rem;
+    }
+    main {
+        row-gap: 30px;
+    }
+    .main-middle-picking {
+        width: auto;
+        height: auto;
+        background: none;
+        row-gap: 20px;
+    }
+    .main-middle-picking-button {
+        width: 100px;
+        height: 100px;
+    }
+    .main-middle-picking-button-scissors,
+    .main-middle-picking-button-spock,
+    .main-middle-picking-button-paper,
+    .main-middle-picking-button-lizard,
+    .main-middle-picking-button-rock {
+        transform: none;
+        border-width: 7px;
+    }
+    .main-middle-picking-button-scissors {
+        transform: translateY(30px);
+    }
+    .main-middle-picking-middle {
+        display: flex;
+        align-items: center;
+        column-gap: 120px;
+    }
+    .main-middle-picking-bottom {
+        display: flex;
+        align-items: center;
+        column-gap: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .main-middle-outcome-picked-inner-itself {
+        width: 100px;
+        height: 100px;
+    }
+    .main-middle-outcome-picked-inner-itself-scissors,
+    .main-middle-outcome-picked-inner-itself-spock,
+    .main-middle-outcome-picked-inner-itself-paper,
+    .main-middle-outcome-picked-inner-itself-lizard,
+    .main-middle-outcome-picked-inner-itself-rock {
+        border-width: 5px;
+    }
+    main {
+        padding-block: 15px;
+        padding-inline: 15px;
+    }
+    .main-top-itself {
+        padding: 10px;
+    }
+    .main-bottom-rules-container-inner {
+        width: calc(100% - 20px);
+    }
+    .main-bottom-rules-container-inner svg {
+        width: 100%;
+    }
+    .main-top-itself-right {
+        padding-inline: 30px;
+    }
+    .main-top-itself-right-score-itself {
+        font-size: 3rem;
+    }
 }

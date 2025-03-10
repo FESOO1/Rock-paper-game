@@ -13,6 +13,10 @@ const pickedByHouseOutcomeContainer = document.querySelector('#pickedByHouseOutc
 const outcomeText = document.querySelector('#outcomeText');
 const playAgainButton = document.querySelector('#playAgainButton');
 
+// OUTCOME ANIMATION
+const outcomeMenu = document.querySelector('.main-middle-outcome-main');
+const outcomePicked = document.querySelector('.main-middle-outcome-picked');
+
 // GAME
 const game = {
     playerPicked: '',
@@ -106,16 +110,20 @@ function theHousePicking() {
 };
 
 function checkWhoWonTheGame() {
-    if (game.choices[game.playerPicked].canBeat[game.housePicked] === true) {
-        outcomeText.textContent = 'YOU WON';
-        game.score++;
-        scoreText.textContent = game.score;
-        localStorage.setItem('scoreLS', game.score);
-    } else if (game.playerPicked === game.housePicked) {
-        outcomeText.textContent = 'DRAW';
-    } else {
-        outcomeText.textContent = 'YOU LOST';
-    };
+    setTimeout(() => outcomePicked.classList.add('main-middle-outcome-picked-active'), 300);
+    setTimeout(() => outcomeMenu.classList.add('main-middle-outcome-main-active'), 500);
+    setTimeout(() => {
+        if (game.choices[game.playerPicked].canBeat[game.housePicked] === true) {
+            outcomeText.textContent = 'YOU WON';
+            game.score++;
+            scoreText.textContent = game.score;
+            localStorage.setItem('scoreLS', game.score);
+        } else if (game.playerPicked === game.housePicked) {
+            outcomeText.textContent = 'DRAW';
+        } else {
+            outcomeText.textContent = 'YOU LOST';
+        };
+    }, 500);
 
     // HANDLING THE VISIBILITY OF THE PICKING AND OUTCOME CONTAINERS
     pickingContainer.classList.add('main-middle-picking-hidden');
@@ -133,6 +141,10 @@ function playAgain() {
     // HANDLING THE VISIBILITY OF THE PICKING AND OUTCOME CONTAINERS
     pickingContainer.classList.remove('main-middle-picking-hidden');
     outcomeContainer.classList.remove('main-middle-outcome-active');
+
+    // REMOVING THE ACTIVE CLASSES FROM THE PICKED AND MENU CONTAINERS
+    outcomePicked.classList.remove('main-middle-outcome-picked-active');
+    outcomeMenu.classList.remove('main-middle-outcome-main-active');
 };
 
 // INITIALIZE BUTTONS
