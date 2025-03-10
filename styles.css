@@ -85,8 +85,8 @@ main {
 /* MAIN MIDDLE PICKING */
 
 .main-middle-picking {
-    display: flex;
-   /*  display: none; */
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center;
     background: url(./images/bg-pentagon.svg) no-repeat;
@@ -103,74 +103,75 @@ main {
 /* MAIN MIDDLE PICKING BUTTON */
 
 .main-middle-picking-button {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 5rem;
     box-shadow: inset 0 4px 0 rgba(0,0,0,0.1);
+    background-color: white;
 }
 
 /* SCISSORS */
 
 .main-middle-picking-button-scissors {
-    transform: translateY(-40px);
+    transform: translateY(-60px);
     border: 13px solid hsl(40, 84%, 53%);
     filter: drop-shadow(0 6px 0 hsl(39, 89%, 41%));
 }
 
 .main-middle-picking-button-scissors:active {
-    transform: translateY(-34px);
+    transform: translateY(-54px);
     filter: drop-shadow(0 0 0 hsl(39, 89%, 41%));
 }
 
 /* SPOCK */
 
 .main-middle-picking-button-spock {
-    transform: translateX(-100px) translateY(-40px);
+    transform: translateX(-100px) translateY(-70px);
     border: 13px solid hsl(189, 58%, 57%);
     filter: drop-shadow(0 6px 0 hsl(189, 55%, 41%));
 }
 
 .main-middle-picking-button-spock:active {
-    transform: translateX(-100px) translateY(-34px);
+    transform: translateX(-100px) translateY(-64px);
     filter: drop-shadow(0 0 0 hsl(189, 55%, 41%));
 }
 
 /* PAPER */
 
 .main-middle-picking-button-paper {
-    transform: translateX(100px) translateY(-40px);
+    transform: translateX(100px) translateY(-70px);
     border: 13px solid hsl(230, 89%, 65%);
     filter: drop-shadow(0 6px 0 hsl(230, 60%, 51%));
 }
 
 .main-middle-picking-button-paper:active {
-    transform: translateX(100px) translateY(-34px);
+    transform: translateX(100px) translateY(-64px);
     filter: drop-shadow(0 0 0 hsl(230, 60%, 51%));
 }
 
 /* LIZARD */
 
 .main-middle-picking-button-lizard {
-    transform: translateX(-40px) translateY(20px);
+    transform: translateX(-40px) translateY(-30px);
     border: 13px solid hsl(261, 72%, 63%);
     filter: drop-shadow(0 6px 0 hsl(261, 50%, 48%));
 }
 
 .main-middle-picking-button-lizard:active {
-    transform: translateX(-40px) translateY(26px);
+    transform: translateX(-40px) translateY(-24px);
     filter: drop-shadow(0 0 0 hsl(261, 50%, 48%));
 }
 
 /* ROCK */
 
 .main-middle-picking-button-rock {
-    transform: translateX(40px) translateY(20px);
+    transform: translateX(40px) translateY(-30px);
     border: 13px solid hsl(349, 70%, 56%);
     filter: drop-shadow(0 6px 0 hsl(349, 67%, 46%));
 }
 
 .main-middle-picking-button-rock:active {
-    transform: translateX(40px) translateY(26px);
+    transform: translateX(40px) translateY(-24px);
     filter: drop-shadow(0 0 0 hsl(349, 67%, 46%));
 }
 
@@ -179,7 +180,72 @@ main {
 .main-middle-outcome {
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 20px;
+    position: relative;
+}
+
+/* MAIN MIDDLE OUTCOME MAIN */
+
+.main-middle-outcome-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.main-middle-outcome-main-text {
+    color: white;
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+}
+
+.main-middle-outcome-main-button {
+    font-size: 1.1rem;
+    padding: 13px 80px;
+    border-radius: 0.5rem;
+    border: 0;
+    color: hsl(229, 25%, 31%);
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* MAIN MIDDLE OUTCOME PICKED */
+
+.main-middle-outcome-picked {
+    display: flex;
+    align-items: center;
+    column-gap: 380px;
+}
+
+.main-middle-outcome-picked-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.main-middle-outcome-picked-inner-text {
+    color: white;
+    letter-spacing: 5px;
+}
+
+.main-middle-outcome-picked-inner-itself {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 10rem;
+    box-shadow: inset 0 7px 0 rgba(0,0,0,0.1);
+    border: 30px solid hsl(40, 84%, 53%);
+    filter: drop-shadow(0 10px 0 hsl(39, 89%, 41%));
+    background-color: white;
 }
 
 /* 
