@@ -23,7 +23,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    row-gap: 40px;
+    row-gap: 80px;
     padding-block: 30px;
     padding-inline: 30px;
 }
