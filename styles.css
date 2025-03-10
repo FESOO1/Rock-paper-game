@@ -74,6 +74,108 @@ main {
 
 /* 
 
+    MAIN MIDDLE
+
+*/
+
+.main-middle {
+    display: flex;
+}
+
+/* MAIN MIDDLE PICKING */
+
+.main-middle-picking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(./images/bg-pentagon.svg) no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 350px;
+    height: 350px;
+}
+
+/* MAIN MIDDLE PICKING BUTTON */
+
+.main-middle-picking-button {
+    width: 120px;
+    height: 120px;
+    border-radius: 5rem;
+    box-shadow: inset 0 4px 0 rgba(0,0,0,0.1);
+}
+/* 
+.main-middle-picking-button:active {
+    transform: translateY(6px);
+    filter: drop-shadow(0 0 0 hsl(39, 89%, 41%));
+} */
+
+/* SCISSORS */
+
+.main-middle-picking-button-scissors {
+    transform: translateY(-40px);
+    border: 13px solid hsl(40, 84%, 53%);
+    filter: drop-shadow(0 6px 0 hsl(39, 89%, 41%));
+}
+
+.main-middle-picking-button-scissors:active {
+    transform: translateY(-34px);
+    filter: drop-shadow(0 0 0 hsl(39, 89%, 41%));
+}
+
+/* SPOCK */
+
+.main-middle-picking-button-spock {
+    transform: translateX(-100px) translateY(-40px);
+    border: 13px solid hsl(189, 58%, 57%);
+    filter: drop-shadow(0 6px 0 hsl(189, 55%, 41%));
+}
+
+.main-middle-picking-button-spock:active {
+    transform: translateX(-100px) translateY(-34px);
+    filter: drop-shadow(0 0 0 hsl(189, 55%, 41%));
+}
+
+/* PAPER */
+
+.main-middle-picking-button-paper {
+    transform: translateX(100px) translateY(-40px);
+    border: 13px solid hsl(230, 89%, 65%);
+    filter: drop-shadow(0 6px 0 hsl(230, 60%, 51%));
+}
+
+.main-middle-picking-button-paper:active {
+    transform: translateX(100px) translateY(-34px);
+    filter: drop-shadow(0 0 0 hsl(230, 60%, 51%));
+}
+
+/* LIZARD */
+
+.main-middle-picking-button-lizard {
+    transform: translateX(-40px) translateY(20px);
+    border: 13px solid hsl(261, 72%, 63%);
+    filter: drop-shadow(0 6px 0 hsl(261, 50%, 48%));
+}
+
+.main-middle-picking-button-lizard:active {
+    transform: translateX(-40px) translateY(26px);
+    filter: drop-shadow(0 0 0 hsl(261, 50%, 48%));
+}
+
+/* ROCK */
+
+.main-middle-picking-button-rock {
+    transform: translateX(40px) translateY(20px);
+    border: 13px solid hsl(349, 70%, 56%);
+    filter: drop-shadow(0 6px 0 hsl(349, 67%, 46%));
+}
+
+.main-middle-picking-button-rock:active {
+    transform: translateX(40px) translateY(26px);
+    filter: drop-shadow(0 0 0 hsl(349, 67%, 46%));
+}
+
+/* 
+
     MAIN BOTTOM
 
 */
