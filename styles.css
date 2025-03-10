@@ -252,6 +252,31 @@ main {
     background-color: white;
 }
 
+.main-middle-outcome-picked-inner-itself-scissors {
+    border: 30px solid hsl(40, 84%, 53%);
+    filter: drop-shadow(0 10px 0 hsl(39, 89%, 41%));
+}
+
+.main-middle-outcome-picked-inner-itself-spock {
+    border: 30px solid hsl(189, 58%, 57%);
+    filter: drop-shadow(0 10px 0 hsl(189, 55%, 41%));
+}
+
+.main-middle-outcome-picked-inner-itself-paper {
+    border: 30px solid hsl(230, 89%, 65%);
+    filter: drop-shadow(0 10px 0 hsl(230, 60%, 51%));
+}
+
+.main-middle-outcome-picked-inner-itself-lizard {
+    border: 30px solid hsl(261, 72%, 63%);
+    filter: drop-shadow(0 10px 0 hsl(261, 50%, 48%));
+}
+
+.main-middle-outcome-picked-inner-itself-rock {
+    border: 30px solid hsl(349, 70%, 56%);
+    filter: drop-shadow(0 10px 0 hsl(349, 67%, 46%));
+}
+
 /* 
 
     MAIN BOTTOM
